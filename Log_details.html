@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Log Analyzer Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header/Navigator -->
+  <header>
+    <div class="header-content">
+      <img src="image/Logo.png" alt="HZ Logo" class="logo-img">
+      <h1>Welcome to My Website</h1>
+    </div>
+    <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
+    <nav id="nav-menu" class="nav-menu">
+      <ul>
+        <li><a href="index.html">Main Menu</a></li>
+        <li><a href="Readme.html">Read Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Kandungan Projek -->
+  <section class="readme">
+    <h2>🔍 Automated Log Analyzer</h2>
+    <p>
+      A log analyzer is a system that helps users understand the logs provided more easily. One of its advantages is the integration with VirusTotal and AbuseIPDB, which allows users to check whether an external IP address is malicious or not. In addition, this system can perform compilation if there is more than one log file and provides a dashboard to visualize and gain insights from the compiled logs.
+    </p>
+
+    <!-- Ciri-ciri utama -->
+    <h3>🧠 Key Features</h3>
+    <ul>
+      <li>Drag-and-drop support for Excel/CSV log files</li>
+      <li>Automatic classification of Inbound and Outbound traffic</li>
+      <li>Top 5 Source and Destination IP analysis</li>
+      <li>Interactive Pie & Bar Charts</li>
+      <li>Customizable time range detection</li>
+      <li>Cyberpunk UI with animations</li>
+    </ul>
+
+    <!-- Teknologi -->
+    <h3>🛠️ Technologies Used</h3>
+    <ul>
+      <li>Python + Streamlit</li>
+      <li>Pandas / Polars for data handling</li>
+      <li>Plotly for dynamic visualizations</li>
+      <li>HTML & CSS (dark theme + hover effects)</li>
+    </ul>
+
+    <!-- Kelebihan -->
+    <h3>🎯 Why Use This Tool?</h3>
+    <p>
+      Traditional log analysis can be time-consuming and technical. This tool simplifies the process with a beginner-friendly UI, fast visuals, and real-time feedback—making it ideal for classrooms, internal use, or quick CTF investigations.
+    </p>
+
+    <!-- Galeri Gambar -->
+    <h3>📸 Contoh UI Sistem</h3>
+    <div class="project-images">
+      <img src="image/Log.png" alt="Screenshot 1">
+      <img src="image/Log1.png" alt="Screenshot 2">
+      <img src="image/Log3.png" alt="Screenshot 3">
+      <img src="image/Log4.png" alt="Screenshot 4">
+      <img src="image/Log5.png" alt="Screenshot 4">
+    </div>
+
+    <!-- Butang Balik -->
+    <div class="view-more">
+      <a href="index.html" class="project-link">← Back to Main Menu</a>
+    </div>
+  </section>
+
+  <!-- JS Navigator -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("nav-menu");
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+
+    document.addEventListener("click", function (event) {
+      const menu = document.getElementById("nav-menu");
+      const toggle = document.querySelector(".nav-toggle");
+      if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+        menu.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>

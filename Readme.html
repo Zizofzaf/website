@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Read Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header + Navigator -->
+    <header>
+        <div class="header-content">
+            <img src="image/Logo.png" alt="HZ Logo" class="logo-img">
+            <h1>Welcome to My Website</h1>
+        </div>
+        <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="index.html">Main Menu</a></li>
+                <li><a href="Readme.html">Read Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Read Me Content -->
+    <section class="readme">
+        <h2>👋 About Me</h2>
+        <p>Hello! I'm <strong>Haziq Zafran</strong>, a student passionate about cybersecurity.</p>
+        <p>I enjoy engaging in IT-related tasks, developing log analysis systems, and competing in CTF events..</p>
+        <p>Current focus: CTF Exercise, automation tools, and threat detection research.</p>
+
+        <h3>🎯 Goals</h3>
+        <ul>
+            <li>Continue improving skills in Linux and Ubuntu, especially in penetration testing environments</li>
+            <li>Build my own SIEM system</li>
+            <li>Learn more about ethical hacking</li>
+            <li>Deepen knowledge in OSINT (Open Source Intelligence), from beginner to advanced level</li>
+            <li>Become a freelancer in programming</li>
+        </ul>
+
+        <h3>📚 Skills</h3>
+        <ul>
+            <li>Python (Log Analyzer, Ransomware Simulator)</li>
+            <li>Linux & Windows Server (Network setup, Apache, NGINX)</li>
+            <li>Streamlit, HTML/CSS</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Haziq Zafran</p>
+    </footer>
+
+    <!-- JavaScript Navigator -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("nav-menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+
+        document.addEventListener("click", function (event) {
+            const menu = document.getElementById("nav-menu");
+            const toggle = document.querySelector(".nav-toggle");
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

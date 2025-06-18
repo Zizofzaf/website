@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="image/Logo.png" alt="HZ Logo" class="logo-img">
+            <h1>Welcome to My Website</h1>
+        </div>
+        <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="index.html">Main Menu</a></li>
+                <li><a href="Readme.html">Read Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="terminal">
+        <p>root:~$ echo "Hello World!"</p>
+        <p>root:~$ whoami</p>
+        <p><strong>Haziq Zafran - Student of Cybersecurity.</strong></p>
+    </section>
+
+    <section class="intro">
+        <div class="intro-content">
+            <div class="intro-text">
+                <h2>I’m a Cybersecurity student</h2>
+                <p>I loves exploring the digital world, building tools, and breaking things to learn 👨‍💻.</p>
+                <p># Despite putting in effort, it often feels like my contributions are overlooked.</p>
+            </div>
+            <img src="image/Profile.png" alt="My Picture" class="profile-img">
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="projects">
+        <h3>My Projects</h3>
+
+        <div class="project-card">
+            <h4>🔍 Automated Log Analyzer</h4>
+            <p>The System Log Analyzer is a tool that helps users easily manage and understand log files. It combines logs from different sources, shows data in charts and graphs, and checks IP addresses against threat databases like VirusTotal and AbuseIPDB to spot any known risks.</p>
+            <div class="project-images">
+                <img src="image/Log.png" alt="Log Analyzer Screenshot 1">
+                <img src="image/Log2.png" alt="Log Analyzer Screenshot 2">
+            </div>
+            <!-- Butang view more -->
+            <div class="view-more">
+                <a href="Log_details.html" class="project-link">View More</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h4>⚙️ Code Generator System</h4>
+            <p>The system creates a **unique ticket ID** for each incident. It first checks existing IDs to avoid duplicates, then generates a new random ID that isn’t already in use.</p>
+            <div class="project-images">
+                <img src="image/Code.png" alt="Code Generator Screenshot 1">
+                <img src="image/Code1.jpg" alt="Code Generator Screenshot 2">
+            </div>
+            <div class="view-more">
+                <a href="CodeGen_details.html" class="project-link">View More</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <p>© 2025 Haziq Zafran</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("nav-menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+
+        // Tutup menu bila klik di luar
+        document.addEventListener("click", function (event) {
+            const menu = document.getElementById("nav-menu");
+            const toggle = document.querySelector(".nav-toggle");
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>

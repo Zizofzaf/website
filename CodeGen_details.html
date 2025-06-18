@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Code Generator System Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="header-content">
+      <img src="image/Logo.png" alt="HZ Logo" class="logo-img">
+      <h1>Welcome to My Website</h1>
+    </div>
+    <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
+    <nav id="nav-menu" class="nav-menu">
+      <ul>
+        <li><a href="index.html">Main Menu</a></li>
+        <li><a href="Readme.html">Read Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Project Content -->
+  <section class="readme">
+    <h2>⚙️ Code Generator System</h2>
+    <p>
+      This project is a simple automatic code generator system designed for ticket generation, testing, and internal tool demos. It enables users to create unique IDs or codes quickly through a user-friendly interface.
+    </p>
+
+    <!-- Features -->
+    <h3>🧠 Key Features</h3>
+    <ul>
+      <li>Generate unique or random codes (Ticket ID / UUID / Custom)</li>
+      <li>Duplicate check</li>
+      <li>Logging & record keeping</li>
+      <li>Copy-to-clipboard</li>
+    </ul>
+
+    <!-- Technology -->
+    <h3>🛠️ Technologies Used</h3>
+    <ul>
+      <li>Python</li>
+      <li>Tkinter (Graphical Interface)</li>
+      <li>uuid / random module</li>
+    </ul>
+
+    <!-- Benefits -->
+    <h3>🎯 System Advantages</h3>
+    <p>
+      The Ticket ID Generator System ensures the uniqueness of each incident ID by checking against existing entries before generating a new one. This prevents duplication and minimizes human error during ticket creation. With a centralized file acting as the single source of truth, the system allows for efficient management and easy tracking of all incident records.
+    </p>
+
+    <!-- Gallery -->
+    <h3>📸 Project UI Previews</h3>
+    <div class="project-images">
+      <img src="image/Code.png" alt="Screenshot 1">
+      <img src="image/Code1.jpg" alt="Screenshot 2">
+    </div>
+
+    <!-- Back Button -->
+    <div class="view-more">
+      <a href="index.html" class="project-link">← Back to Main Menu</a>
+    </div>
+  </section>
+
+  <!-- Navigation Script -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("nav-menu");
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+
+    document.addEventListener("click", function (event) {
+      const menu = document.getElementById("nav-menu");
+      const toggle = document.querySelector(".nav-toggle");
+      if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+        menu.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>
