@@ -1,69 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Read Me</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header + Navigator -->
-    <header>
-        <div class="header-content">
-            <img src="image/Logo.png" alt="HZ Logo" class="logo-img">
-            <h1>Welcome to My Website</h1>
-        </div>
-        <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
-        <nav id="nav-menu" class="nav-menu">
-            <ul>
-                <li><a href="index.html">Main Menu</a></li>
-                <li><a href="Readme.html">Read Me</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Read Me Content -->
-    <section class="readme">
-        <h2>👋 About Me</h2>
-        <p>Hello! I'm <strong>Haziq Zafran</strong>, a student passionate about cybersecurity.</p>
-        <p>I enjoy engaging in IT-related tasks, developing log analysis systems, and competing in CTF events..</p>
-        <p>Current focus: CTF Exercise, automation tools, and threat detection research.</p>
+  <!-- Header / Navigation -->
+  <header>
+    <div class="header-content">
+      <img src="image/Logo.png" alt="HZ Logo" class="logo-img">
+      <h1>Welcome to My Website</h1>
+    </div>
+    <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
+    <nav id="nav-menu" class="nav-menu">
+      <ul>
+        <li><a href="index.html">Main Menu</a></li>
+        <li><a href="readme.html">Read Me</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="image/Profile.png" alt="Haziq Zafran" class="hero-img">
+    <div class="hero-text">
+      <h2>👋 Hi, I’m Haziq Zafran</h2>
+      <p>A passionate <strong>Cybersecurity Student</strong> from Malaysia who loves breaking, building, and learning everything related to digital defense.</p>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section class="readme">
+  <h2>🧠 About Me</h2>
+
+  <!-- Wrap in blockquote -->
+    <blockquote>
+        I enjoy solving cybersecurity challenges, building tools for automation, and participating in CTFs.  
+        My journey started in 2019 and I've been exploring cybersecurity ever since.
+    </blockquote>
+
+    <!-- Skills and Goals -->
+    <div class="grid-cards">
+      <div class="card">
         <h3>🎯 Goals</h3>
         <ul>
-            <li>Continue improving skills in Linux and Ubuntu, especially in penetration testing environments</li>
-            <li>Build my own SIEM system</li>
-            <li>Learn more about ethical hacking</li>
-            <li>Deepen knowledge in OSINT (Open Source Intelligence), from beginner to advanced level</li>
-            <li>Become a freelancer in programming</li>
+          <li>Master Network Forensics</li>
+          <li>Build my own SIEM System</li>
+          <li>Develop malware simulators for labs</li>
         </ul>
-
+      </div>
+      <div class="card">
         <h3>📚 Skills</h3>
         <ul>
-            <li>Python (Log Analyzer, Ransomware Simulator)</li>
-            <li>Linux & Windows Server (Network setup, Apache, NGINX)</li>
-            <li>Streamlit, HTML/CSS</li>
+          <li>Python (Log Analyzer, Malware Tools)</li>
+          <li>Linux, Wireshark, Burp Suite</li>
+          <li>Streamlit, Flask, HTML/CSS</li>
         </ul>
-    </section>
+      </div>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Haziq Zafran</p>
-    </footer>
+    <!-- Optional: Quote -->
+    <blockquote>
+      "In cybersecurity, learning never stops — because threats never do." – Haziq
+    </blockquote>
+  </section>
 
-    <!-- JavaScript Navigator -->
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById("nav-menu");
-            menu.style.display = (menu.style.display === "block") ? "none" : "block";
-        }
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Haziq Zafran. Built with ❤️ & cybersecurity curiosity.</p>
+  </footer>
 
-        document.addEventListener("click", function (event) {
-            const menu = document.getElementById("nav-menu");
-            const toggle = document.querySelector(".nav-toggle");
-            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-                menu.style.display = "none";
-            }
-        });
-    </script>
+  <!-- JS Navigation -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("nav-menu");
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+
+    document.addEventListener("click", function (event) {
+      const menu = document.getElementById("nav-menu");
+      const toggle = document.querySelector(".nav-toggle");
+      if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+        menu.style.display = "none";
+      }
+    });
+  </script>
+
 </body>
 </html>
